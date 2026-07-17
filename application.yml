@@ -1,25 +1,14 @@
-server:
-  port: 8080
-
-spring:
-  application:
-    name: api-gateway
-  cloud:
-    gateway:
-      routes:
-        - id: discovery-server
-          uri: http://localhost:8761
-          predicates:
-            - Path=/eureka/*		
-        - id: google
-          uri: https://www.google.com
-          predicates:
-            - Path=/google
-
-  config:
-    import: configserver:http://localhost:8888
-
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework.cloud.gateway: INFO
