@@ -24,3 +24,7 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
+
+jwt:
+  secret: hhf558dbndfubbf88gfhnjfngjndf8
+  expiration: 3600000
