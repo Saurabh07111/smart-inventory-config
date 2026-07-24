@@ -26,5 +26,5 @@ eureka:
     fetch-registry: true
 
 jwt:
-  secret: hhf558dbndfubbf88gfhnjfngjndf8
+  secret: hhf558dbndfubbf88gfhnjfngjqwertyuiopasdfghjklzxcvbnmmnbvcxzasdfghjklqwertyuiopkjhgfdzxcvbnderftyhujgndf8
   expiration: 3600000
