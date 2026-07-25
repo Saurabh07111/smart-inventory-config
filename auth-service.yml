@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: auth-service
+  config:
+    import: configserver:http://localhost:8888
 
   datasource:
     url: jdbc:mysql://localhost:3306/sioms_auth_db
@@ -31,3 +33,5 @@ eureka:
 jwt:
   secret: hhf558dbndfubbf88gfhnjfngjqwertyuiopasdfghjklzxcvbnmmnbvcxzasdfghjklqwertyuiopkjhgfdzxcvbnderftyhujgndf8
   expiration: 3600000
+
+ 
