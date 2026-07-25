@@ -5,7 +5,7 @@ spring:
   application:
     name: AUTH-SERVICE
   config:
-    import: optional:configserver:http://localhost:8888   # ✅ optional import avoids startup failure
+    import: optional:configserver:http://localhost:8888   # ✅ avoids startup failure
 
 eureka:
   client:
