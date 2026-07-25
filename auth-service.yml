@@ -4,9 +4,8 @@ server:
 spring:
   application:
     name: AUTH-SERVICE
-  cloud:
-    config:
-      enabled: false   # disable if you don’t want config server
+  config:
+    import: optional:configserver:http://localhost:8888   # ✅ optional import avoids startup failure
 
 eureka:
   client:
