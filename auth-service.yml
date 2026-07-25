@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: AUTH-SERVICE
+  cloud:
+    config:
+      enabled: false   # disable if you don’t want config server
+
 eureka:
   client:
     service-url:
