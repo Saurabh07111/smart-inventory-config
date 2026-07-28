@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: api-gateway
+
   cloud:
     gateway:
       routes:
@@ -11,11 +12,22 @@ spring:
           uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth/**
-  # Remove config import if you disabled config server
-  # config:
-  #   import: configserver:http://localhost:8888
+
+        - id: discovery-server
+          uri: http://localhost:8761
+          predicates:
+            - Path=/eureka/**
+
+  config:
+    import: configserver:http://localhost:8888
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
