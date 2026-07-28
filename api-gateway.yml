@@ -13,13 +13,6 @@ spring:
           predicates:
             - Path=/auth/**
 
-        - id: discovery-server
-          uri: http://localhost:8761
-          predicates:
-            - Path=/eureka/**
-
-  config:
-    import: configserver:http://localhost:8888
 
 eureka:
   client:
